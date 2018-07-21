@@ -1,0 +1,21 @@
+{
+  "name": "ot-ui",
+  "version": "0.0.1",
+  "description": "Open Targets UI component library",
+  "main": "index.js",
+  "author": "Gareth Peat",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "eslint": "^5.2.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-react": "^7.10.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-styleguidist": "^7.1.0"
+  }
+}
