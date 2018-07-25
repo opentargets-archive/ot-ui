@@ -23,6 +23,8 @@
   },
   "scripts": {
     "build": "babel lib -d build",
-    "build:watch": "babel lib -w -d build"
+    "build:watch": "babel lib -w -d build",
+    "version": "yarn build",
+    "postversion": "git push && git push --tags"
   }
 }
