@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
+    "@material-ui/core": "^1.4.3",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -17,11 +18,13 @@
     "eslint": "^5.2.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-react": "^7.10.0",
+    "polished": "^1.9.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-styleguidist": "^7.1.0",
-    "react-virtualized": "^9.20.1"
+    "react-virtualized": "^9.20.1",
+    "typeface-roboto": "^0.0.54"
   },
   "scripts": {
     "build": "babel lib -d build",
