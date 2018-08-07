@@ -10,12 +10,17 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "eslint": "^5.2.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint": "^4.1.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.1.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "prettier": "^1.14.0",
@@ -27,6 +32,7 @@
   "scripts": {
     "build": "babel lib -d build",
     "build:watch": "babel lib -w -d build",
+    "eslint": "eslint . --fix --ext .js",
     "version": "yarn build",
     "postversion": "git push && git push --tags",
     "prettier": "prettier --write",
@@ -38,6 +44,14 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "lib/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "**/*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
