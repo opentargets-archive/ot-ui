@@ -16,6 +16,9 @@
     "eslint": "^5.2.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-react": "^7.10.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.14.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -25,6 +28,16 @@
     "build": "babel lib -d build",
     "build:watch": "babel lib -w -d build",
     "version": "yarn build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prettier": "prettier --write",
+    "prettier:all": "prettier --write 'lib/**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }
