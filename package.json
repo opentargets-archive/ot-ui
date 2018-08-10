@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
+    "@team-griffin/install-self-peers": "^1.1.1",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -15,6 +16,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.34.1",
@@ -23,6 +26,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.1.0",
     "husky": "^1.0.0-rc.13",
+    "jest": "^23.5.0",
     "lint-staged": "^7.2.0",
     "prettier": "^1.14.0",
     "prop-types": "^15.6.2",
@@ -35,7 +39,10 @@
     "version": "yarn build",
     "postversion": "git push && git push --tags",
     "prettier": "prettier --write",
-    "prettier:all": "prettier --write 'lib/**/*.js'"
+    "prettier:all": "prettier --write 'lib/**/*.js'",
+    "test": "jest",
+    "test:coverage": "yarn test --coverage",
+    "peers": "install-self-peers -- --ignore-scripts"
   },
   "husky": {
     "hooks": {
@@ -64,5 +71,13 @@
     "react-select": "^2.0.0",
     "react-virtualized": "^9.20.1",
     "typeface-roboto": "^0.0.54"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./lib/setupTests.js",
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "!lib/index.js",
+      "!lib/setupTests.js"
+    ]
   }
 }
