@@ -63,6 +63,7 @@
   "peerDependencies": {
     "@material-ui/core": "^1.4.3",
     "d3": "^5.5.0",
+    "fg-loadcss": "^2.0.1",
     "polished": "^1.9.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
