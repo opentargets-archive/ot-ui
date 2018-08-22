@@ -17,6 +17,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^3.0.4",
     "enzyme": "^3.4.1",
     "enzyme-adapter-react-16": "^1.2.0",
     "eslint": "^4.1.1",
@@ -43,7 +44,8 @@
     "prettier:all": "prettier --write 'lib/**/*.js'",
     "test": "jest",
     "test:coverage": "yarn test --coverage",
-    "peers": "install-self-peers -- --ignore-scripts"
+    "peers": "install-self-peers -- --ignore-scripts",
+    "report:coverage": "codecov"
   },
   "husky": {
     "hooks": {
