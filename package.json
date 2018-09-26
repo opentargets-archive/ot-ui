@@ -3,7 +3,10 @@
   "version": "0.0.23",
   "description": "Open Targets UI component library",
   "main": "build/index.js",
-  "author": "Gareth Peat",
+  "contributors": [
+    "Gareth Peat <garethpeat@gmail.com>",
+    "Alfredo Miranda <alfredo@miranda.io>"
+  ],
   "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
