@@ -15,6 +15,7 @@
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-backgrounds": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
+    "@storybook/addon-viewport": "^5.0.6",
     "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
     "@team-griffin/install-self-peers": "^1.1.1",
