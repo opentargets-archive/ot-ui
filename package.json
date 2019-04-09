@@ -61,7 +61,7 @@
     "test:coverage": "yarn test --coverage",
     "peers": "install-self-peers -- --ignore-scripts",
     "report:coverage": "codecov",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./storybook-static",
     "build-storybook": "build-storybook"
   },
   "husky": {

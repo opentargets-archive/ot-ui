@@ -6,16 +6,20 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import setupIcons from '../lib/icons/setupIcons';
 import theme from '../lib/theme';
 import { PALETTE } from '../lib/constants';
+import otStorybookTheme from './theme';
 
 // load icons
 setupIcons();
 
-// add changeable backgrounds (in our palette)
+// add changeable backgrounds (in our palette) and ot theming
 addParameters({
   backgrounds: [
     { name: 'white', value: '#fff', default: true },
     ...Object.keys(PALETTE).map(name => ({ name, value: PALETTE[name] })),
   ],
+  options: {
+    theme: otStorybookTheme,
+  },
 });
 
 // decorate all stories with the following
