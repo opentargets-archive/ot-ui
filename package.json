@@ -35,7 +35,11 @@
     "lint-staged": "^7.2.0",
     "prettier": "^1.14.0",
     "prop-types": "^15.6.2",
-    "react-styleguidist": "^7.1.0"
+    "react-styleguidist": "^7.1.0",
+    "@storybook/react": "^5.0.6",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6"
   },
   "scripts": {
     "build": "babel lib -d build",
@@ -48,7 +52,9 @@
     "test": "jest",
     "test:coverage": "yarn test --coverage",
     "peers": "install-self-peers -- --ignore-scripts",
-    "report:coverage": "codecov"
+    "report:coverage": "codecov",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -88,5 +94,6 @@
       "!lib/index.js",
       "!lib/setupTests.js"
     ]
-  }
+  },
+  "dependencies": {}
 }
