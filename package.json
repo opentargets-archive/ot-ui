@@ -45,7 +45,6 @@
     "prettier": "^1.14.0",
     "prop-types": "^15.6.2",
     "react-router-dom": "^4.3.1",
-    "react-styleguidist": "^7.1.0",
     "storybook-addon-material-ui": "^0.9.0-alpha.18",
     "storybook-react-router": "^1.0.5",
     "typeface-inter": "^3.3.0"
@@ -94,8 +93,8 @@
     "react-measure": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "react-select": "^2.0.0",
-    "typeface-roboto": "^0.0.54",
-    "typeface-inter": "^3.3.0"
+    "typeface-inter": "^3.3.0",
+    "typeface-roboto": "^0.0.54"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./lib/setupTests.js",
