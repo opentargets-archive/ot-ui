@@ -2,6 +2,7 @@ import { configure, addDecorator, addParameters } from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
 import { muiTheme } from 'storybook-addon-material-ui';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import 'typeface-inter';
 
 import setupIcons from '../lib/icons/setupIcons';
 import theme from '../lib/theme';
