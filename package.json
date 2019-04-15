@@ -93,8 +93,7 @@
     "react-measure": "^2.1.0",
     "react-router-dom": "^4.3.1",
     "react-select": "^2.0.0",
-    "typeface-inter": "^3.3.0",
-    "typeface-roboto": "^0.0.54"
+    "typeface-inter": "^3.3.0"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./lib/setupTests.js",
