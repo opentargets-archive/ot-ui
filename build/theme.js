@@ -1,0 +1,153 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _styles = require('@material-ui/core/styles');
+
+var _polished = require('polished');
+
+var _constants = require('./constants');
+
+var PRIMARY = '#3489ca'; // '#7b196a'; // '#0091eb';
+var SECONDARY = '#ff6350';
+
+var GENE = PRIMARY;
+var VARIANT = PRIMARY;
+var STUDY = PRIMARY;
+
+var theme = (0, _styles.createMuiTheme)({
+  shape: {
+    borderRadius: 0
+  },
+  typography: {
+    useNextVariants: true,
+    fontFamily: '"Inter", "serif"'
+  },
+  palette: {
+    primary: {
+      light: (0, _polished.lighten)(0.2, PRIMARY),
+      main: PRIMARY,
+      dark: (0, _polished.darken)(0.2, PRIMARY),
+      contrastText: '#fff'
+    },
+    secondary: {
+      light: (0, _polished.lighten)(0.2, SECONDARY),
+      main: SECONDARY,
+      dark: (0, _polished.darken)(0.2, SECONDARY),
+      contrastText: '#fff'
+    },
+    text: {
+      primary: '#5A5F5F'
+    },
+    purple: _constants.PALETTE.purple,
+    gene: GENE,
+    tagVariant: VARIANT,
+    indexVariant: VARIANT,
+    study: STUDY,
+    high: (0, _polished.darken)(0.2, PRIMARY),
+    medium: PRIMARY,
+    low: (0, _polished.lighten)(0.2, PRIMARY),
+    footer: '#2e2d35'
+  },
+  sectionPadding: '8px',
+  widgetHeight: '250px',
+  props: {
+    MuiTab: {
+      disableRipple: true
+    }
+  },
+  overrides: {
+    MuiButton: {
+      root: {
+        borderRadius: 0,
+        border: 0,
+        padding: '6px 12px',
+        minWidth: '32px',
+        minHeight: '32px',
+        height: '32px',
+        textTransform: 'none'
+      }
+    },
+    MuiCard: {
+      root: {
+        border: '1px solid #ddd'
+      }
+    },
+    MuiIconButton: {
+      root: {
+        width: '32px',
+        height: '32px',
+        padding: '0px'
+      }
+    },
+    MuiTablePagination: {
+      root: {
+        height: '36px',
+        minHeight: '36px'
+      },
+      toolbar: {
+        height: '36px',
+        minHeight: '36px'
+      }
+    },
+    MuiTabs: {
+      root: {
+        borderBottom: '1px solid #616161'
+      },
+      indicator: {
+        display: 'none'
+      }
+    },
+    MuiTab: {
+      root: {
+        minWidth: '10px !important',
+        '&$selected': {
+          backgroundColor: PRIMARY,
+          color: 'white',
+          '&:hover': { backgroundColor: PRIMARY }
+        },
+        '&:hover': { backgroundColor: (0, _polished.lighten)(0.3, PRIMARY) }
+      },
+      label: {
+        textTransform: 'none'
+      }
+    },
+    MuiTypography: {
+      colorSecondary: {
+        color: '#E2DFDF'
+      },
+      colorError: {
+        color: '#C94C52'
+      }
+    },
+    MuiExpansionPanelSummary: {
+      root: {
+        padding: 0,
+        minHeight: 0,
+        '&$expanded': {
+          minHeight: 0
+        }
+      },
+      content: {
+        margin: 0,
+        '&$expanded': {
+          margin: 0
+        }
+      },
+      expanded: {
+        margin: 0,
+        minHeight: 0
+      }
+    },
+    MuiExpansionPanelDetails: {
+      root: {
+        padding: 0,
+        paddingRight: '32px'
+      }
+    }
+  }
+});
+
+exports.default = theme;
