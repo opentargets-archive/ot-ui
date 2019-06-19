@@ -115,11 +115,11 @@ var theme = (0, _styles.createMuiTheme)({
       }
     },
     MuiTypography: {
-      colorSecondary: {
-        color: '#E2DFDF'
-      },
+      // colorSecondary: {
+      //   color: '#E2DFDF',
+      // },
       colorError: {
-        color: '#C94C52'
+        color: SECONDARY
       }
     },
     MuiExpansionPanelSummary: {
@@ -145,6 +145,11 @@ var theme = (0, _styles.createMuiTheme)({
       root: {
         padding: 0,
         paddingRight: '32px'
+      }
+    },
+    MuiLinearProgress: {
+      root: {
+        height: '1px'
       }
     }
   }
