@@ -25,7 +25,7 @@ addParameters({
 
 // decorate all stories with the following
 addDecorator(StoryRouter());
-addDecorator(muiTheme(theme));
+addDecorator(muiTheme([theme]));
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../lib/components', true, /\.stories\.js$/);
