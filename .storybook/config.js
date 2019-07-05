@@ -6,7 +6,6 @@ import 'typeface-inter';
 
 import setupIcons from '../lib/icons/setupIcons';
 import theme from '../lib/theme';
-import { PALETTE } from '../lib/constants';
 import otStorybookTheme from './theme';
 
 // load icons
@@ -16,7 +15,8 @@ setupIcons();
 addParameters({
   backgrounds: [
     { name: 'white', value: '#fff', default: true },
-    ...Object.keys(PALETTE).map(name => ({ name, value: PALETTE[name] })),
+    { name: 'primary', value: theme.palette.primary.main },
+    { name: 'secondary', value: theme.palette.secondary.main },
   ],
   options: {
     theme: otStorybookTheme,
