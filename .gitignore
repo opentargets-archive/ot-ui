@@ -6,8 +6,8 @@
 # testing
 /coverage
 
-# production
-/build
+# production (a build is required to import this repo as a dependency)
+# /build
 
 # misc
 .DS_Store
