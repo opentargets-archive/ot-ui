@@ -10,6 +10,8 @@ var _fileSaver2 = _interopRequireDefault(_fileSaver);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var UNEXPECTED_FORMAT = 'Unexpected format. Supported options are csv, tsv and json.';
@@ -101,22 +103,59 @@ var asMimeType = function asMimeType(format) {
   }
 };
 
-var downloadTable = function downloadTable(_ref5) {
-  var rows = _ref5.rows,
-      headerMap = _ref5.headerMap,
-      format = _ref5.format,
-      filenameStem = _ref5.filenameStem;
+var downloadTable = function () {
+  var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(_ref5) {
+    var rows = _ref5.rows,
+        headerMap = _ref5.headerMap,
+        format = _ref5.format,
+        filenameStem = _ref5.filenameStem;
+    var data, contentString, blob;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            if (!(typeof rows === 'function')) {
+              _context.next = 6;
+              break;
+            }
 
-  if (!rows || rows.length === 0) {
-    console.info('Nothing to download.');
-    return;
-  }
+            _context.next = 3;
+            return rows();
 
-  var contentString = asContentString({ rows: rows, headerMap: headerMap, format: format });
-  var blob = new Blob([contentString], {
-    type: asMimeType(format)
-  });
-  _fileSaver2.default.saveAs(blob, filenameStem + '.' + format, { autoBOM: false });
-};
+          case 3:
+            data = _context.sent;
+
+            console.log('data', data);
+            rows = data;
+
+          case 6:
+            if (!(!rows || rows.length === 0)) {
+              _context.next = 9;
+              break;
+            }
+
+            console.info('Nothing to download.');
+            return _context.abrupt('return');
+
+          case 9:
+            contentString = asContentString({ rows: rows, headerMap: headerMap, format: format });
+            blob = new Blob([contentString], {
+              type: asMimeType(format)
+            });
+
+            _fileSaver2.default.saveAs(blob, filenameStem + '.' + format, { autoBOM: false });
+
+          case 12:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, undefined);
+  }));
+
+  return function downloadTable(_x) {
+    return _ref6.apply(this, arguments);
+  };
+}();
 
 exports.default = downloadTable;

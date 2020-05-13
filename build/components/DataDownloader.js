@@ -33,6 +33,9 @@ var styles = function styles() {
     container: {
       marginBottom: '2px'
     },
+    caption: {
+      alignSelf: 'center'
+    },
     downloadHeader: {
       marginTop: '7px'
     }
@@ -64,7 +67,7 @@ function DataDownloader(_ref) {
     },
     _react2.default.createElement(
       _Grid2.default,
-      { item: true },
+      { item: true, className: classes.caption },
       _react2.default.createElement(
         _Typography2.default,
         { variant: 'caption', className: classes.downloadHeader },
