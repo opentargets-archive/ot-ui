@@ -115,7 +115,7 @@ var downloadTable = function () {
         switch (_context.prev = _context.next) {
           case 0:
             if (!(typeof rows === 'function')) {
-              _context.next = 6;
+              _context.next = 5;
               break;
             }
 
@@ -125,19 +125,18 @@ var downloadTable = function () {
           case 3:
             data = _context.sent;
 
-            console.log('data', data);
             rows = data;
 
-          case 6:
+          case 5:
             if (!(!rows || rows.length === 0)) {
-              _context.next = 9;
+              _context.next = 8;
               break;
             }
 
             console.info('Nothing to download.');
             return _context.abrupt('return');
 
-          case 9:
+          case 8:
             contentString = asContentString({ rows: rows, headerMap: headerMap, format: format });
             blob = new Blob([contentString], {
               type: asMimeType(format)
@@ -145,7 +144,7 @@ var downloadTable = function () {
 
             _fileSaver2.default.saveAs(blob, filenameStem + '.' + format, { autoBOM: false });
 
-          case 12:
+          case 11:
           case 'end':
             return _context.stop();
         }
