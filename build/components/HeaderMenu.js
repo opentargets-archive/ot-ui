@@ -30,6 +30,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var styles = function styles() {
   return {
+    icon: {
+      marginLeft: '20px'
+    },
     menuLink: {
       width: '100%',
       paddingTop: '8px',
@@ -100,6 +103,7 @@ var HeaderMenu = function (_Component) {
         _react2.default.createElement(
           _core.IconButton,
           {
+            className: classes.icon,
             size: 'medium',
             color: 'inherit',
             'aria-label': 'open header menu',

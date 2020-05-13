@@ -18,7 +18,6 @@ var theme = {
     borderRadius: 0
   },
   typography: {
-    useNextVariants: true,
     fontFamily: '"Inter", "serif"'
   },
   palette: {
