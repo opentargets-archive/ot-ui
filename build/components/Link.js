@@ -40,10 +40,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var styles = function styles(theme) {
   return {
     base: {
-      fontFamily: 'Inter',
       fontSize: 'inherit',
-      textDecoration: 'none',
-      whiteSpace: 'nowrap'
+      textDecoration: 'none'
     },
     baseDefault: {
       color: theme.palette.primary.main,

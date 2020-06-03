@@ -18,7 +18,7 @@ var theme = {
     borderRadius: 0
   },
   typography: {
-    fontFamily: '"Inter", "serif"'
+    fontFamily: '"Inter", "sans-serif"'
   },
   palette: {
     primary: {
