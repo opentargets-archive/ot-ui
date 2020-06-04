@@ -63,14 +63,6 @@ var styles = function styles(theme) {
       },
       display: 'flex',
       alignItems: 'center'
-    },
-    externalIcon: {
-      fontSize: '70%',
-      verticalAlign: 'baseline',
-      marginLeft: '3px',
-      width: 'auto',
-      height: 'auto',
-      display: 'inline'
     }
   };
 };
@@ -109,10 +101,7 @@ var Link = function (_React$Component) {
           href: to,
           onClick: onClick
         },
-        children,
-        footer ? null : _react2.default.createElement(_Icon2.default, {
-          className: (0, _classnames2.default)('fa', 'fa-external-link-alt', classes.externalIcon)
-        })
+        children
       ) : _react2.default.createElement(
         _reactRouterDom.Link,
         {
